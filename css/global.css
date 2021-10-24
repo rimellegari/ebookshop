@@ -1,0 +1,154 @@
+/* Estilos presentes em todas as páginas*/
+
+/*reset*/
+* {
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh
+}
+
+html {
+    --mid-yellow: #F7CF4F;
+    --mid-blue: #00254A;
+    --dark-blue: #011531;
+    --light-blue: #40B5DA;
+    --white: #fafafa;
+    --grey-dark: #4d5e77;
+    --grey-blue: #a1b2cd;
+    --grey-light: #e5eaf1;
+    --grey-medium: #eaecf2;
+    --red: #e83f5b;
+        /* normalizando o tamanho de font-size em 10px em % */
+    font-size: 62.5%;
+}
+/* navbar */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    height: 6vh;
+
+}
+
+.logo {
+    font-size: 2rem;
+    padding: .5rem;
+}
+.navbar-links ul {
+    display: flex;
+    font-size: 1.4rem;
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.navbar-links li a {
+    color:var(--white);
+    display: block;
+    padding: 1rem;
+    
+}
+
+.navbar-links li a:hover {
+    background-color: var(--mid-blue);
+    color: var(--mid-yellow)
+}
+
+#navbar ul li {
+    text-align: center;
+    list-style: none;
+    height: 100%;
+    
+}
+
+/*navbar responsiva*/
+
+.burger {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.bar {
+    height:3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width:960px){
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+   #navbar {
+       flex-direction: column;
+       align-items: flex-start;
+    }
+    .logo {
+        padding-bottom: .5rem;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links a {
+        width: 100%;
+        display: block;
+    }
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
