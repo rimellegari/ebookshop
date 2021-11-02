@@ -7,13 +7,17 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    color: var(--grey-dark);
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh
+    height: 100vh;
+    background-color:var(--white);
 }
 
 html {
+    --principal: #333;
+    --secundaria: #444;
     --mid-yellow: #F7CF4F;
     --mid-blue: #00254A;
     --dark-blue: #011531;
@@ -24,8 +28,14 @@ html {
     --grey-light: #e5eaf1;
     --grey-medium: #eaecf2;
     --red: #e83f5b;
+    --fundo: #e8ffff;
+    --fundo-card: #d9f1ff;
         /* normalizando o tamanho de font-size em 10px em % */
     font-size: 62.5%;
+}
+
+form input {
+    padding-left: .5rem;
 }
 /* navbar */
 
@@ -33,15 +43,16 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dark-blue);
+    background-color: var(--principal);
     color: var(--white);
-    height: 6vh;
+    min-height: 6vh;
 
 }
 
 .logo {
     font-size: 2rem;
     padding: .5rem;
+    color: var(--white);
 }
 .navbar-links ul {
     display: flex;
@@ -58,19 +69,20 @@ html {
 .navbar-links li a {
     color:var(--white);
     display: block;
-    padding: 1rem;
+    padding: 2rem;
     
 }
 
 .navbar-links li a:hover {
-    background-color: var(--mid-blue);
-    color: var(--mid-yellow)
+    background-color: var(--secundaria);
+    color: var(--mid-yellow);
 }
 
 #navbar ul li {
     text-align: center;
     list-style: none;
     height: 100%;
+   
     
 }
 
@@ -88,7 +100,7 @@ html {
 }
 
 .bar {
-    height:3px;
+    min-height:3px;
     width: 100%;
     background-color: #fff;
     border-radius: 10px;

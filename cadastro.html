@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Arquivos CSS-->
     <link rel="stylesheet" href="css/global.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/botao.css">
+
+    <title>LivDev | Cadastro</title>
 </head>
 <body>
     <!--INÍCIO NAVBAR-->
@@ -14,8 +17,8 @@
         <nav id="navbar">
             <div class="logo">LivDev</div>
             <!--INÍCIO BURGER MENU -->
-            <a href="#">
-                <span class="bar"></span>
+            <a class="burger" href="#">
+                <div class="bar"></div>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </a>
@@ -36,6 +39,86 @@
         </nav>
     </header>
     <!--FIM NAVBAR-->
-    
+    <!--CADASTRO-->
+    <br>
+    <main id="cadastro-cliente">
+        <h1>Complete seu cadastro</h1>
+        <br>
+        <form action="#" method="post" id="cadastro">
+            <!--INFORMAÇÃO BÁSICA-->
+            <h2>Informações Básicas</h2>
+            <br>
+            <div class="input-wrap">
+                <label name="nome"><i class="far fa-user"></i> Nome</label>
+                <input type="text" name="" id="name-input" placeholder="nome completo" data-tipo="nome" required>
+                <span class="input-mensagem-erro">Campo Inválido</span> 
+            </div>
+            <div class="input-wrap">
+                <label name="email"><i class="fas fa-at"></i> email</label>
+                <input type="email" name="email-input" id="email-input" placeholder="xxx@email.com" data-tipo="email" required>
+                <span class="input-mensagem-erro">Campo Inválido</span> 
+            </div>
+            <div class="input-wrap">
+                <label name="senha"><i class="fas fa-key"></i> senha</label>
+                <input type="password" data-tipo="senha" required title ='a senha deve ter entre 6 a 12 caracteres, ao menos uma letra maiuscula sem caracteres especiais' name="senha-input" id="senha-input" placeholder="*****" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$">
+                <span class="input-mensagem-erro">Campo Inválido</span> 
+            </div>
+            <br>
+            <!--INFORMAÇÕES PESSOAIS-->
+            <h2>Informações Pessoais</h2>
+            <br>
+            <div class="input-wrap">
+                <label name="dataNascimento">Data de nascimento</label>
+                <input type="date" name="dataNasc-input" id="dataNasc-input" data-tipo="dataNascimento" required>
+                <span class="input-mensagem-erro">Campo Inválido</span> 
+            </div>
+            <div class="input-wrap">
+                <label name="CPF" id='cpf'>
+                    CPF</label>
+                <input type="number" name="CPF" id="cpf-input" data-tipo="cpf" required>
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>
+
+            <!--ENDEREÇO-->
+            <br>
+            <h2>Endereço</h2>
+            <br>
+            <div class="input-wrap">
+                <label name="CEP" id="cep">CEP</label>
+                <input type="text" name="cep" id="cep-input" data-tipo="cep" required pattern="[\d]{5}-?[\d]{3}">
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>
+            <div class="input-wrap">
+                <label name="logradouro">Logradouro</label>
+                <input type="text" name="" data-tipo='logradouro' id="logradouro" required>
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>
+            <div class="input-wrap">
+                <label name="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento">
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>
+            <div class="input-wrap">
+                <label name="cidade">Cidade</label>
+                <input type="text" name="cidade" data-tipo="cidade" id="cidade" required>
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>
+            <div class="input-wrap">
+                <label name="estado">Estado</label>
+                <input type="text" name="estado" data-tipo="estado" id="estado" required>
+                <span class="input-mensagem-erro">Campo Inválido</span>
+            </div>         
+            <br>
+            <br>
+            <div class="botao-wrap">
+                <button class="botao">Cadastrar</a>
+            </div>
+        </form>
+        
+    </main>
+    <br>
+<script src="https://kit.fontawesome.com/0287dcca47.js" crossorigin="anonymous"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/app.js" type="module"></script>
 </body>
 </html>

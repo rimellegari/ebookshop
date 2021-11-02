@@ -1,0 +1,85 @@
+/*fontes*/
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding-left: .7rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+    font-weight: normal;
+    padding-left: 2rem;
+}
+
+/*section*/
+#cadastro-cliente {
+    margin-top: 1rem;
+    width: 60%;
+    margin: auto;
+    background-color: #656565;
+    padding-top: 2rem;
+    border-radius: .5rem;
+    box-shadow: .4rem .4rem .3rem var(--grey-light);
+}
+
+#cadastro-cliente h1 {
+    color: var(--white);
+}
+
+/*form*/
+
+#cadastro h1, h2, h3, label, i {
+    color: var(--white);
+}
+
+.input-wrap {
+    width: 90%;
+    margin: auto;
+
+}
+.input-wrap input, label {
+    font-size: 1.5rem;
+    margin-bottom: .6rem;
+}
+
+.input-wrap input {
+    width: 90%;
+    height: 3rem;
+    border: transparent;
+    outline: transparent;
+    margin-bottom: .6rem;
+}
+
+.input-wrap input, label {
+    display: block;
+
+}
+
+input {
+    border-radius: .5rem;
+}
+
+.input-wrap--invalido {
+    margin-bottom: 0.5rem;
+}
+
+.input-wrap--invalido input {
+    border: 2.8px solid var(--mid-yellow);
+    border-radius: 7px;
+}
+
+.input-wrap--invalido input label {
+    color: var(--red);
+}
+
+.input-mensagem-erro {
+    visibility: hidden;
+}
+
+.input-wrap--invalido .input-mensagem-erro {
+    color: var(--mid-yellow);
+    font-size: 1.6rem;
+    font-weight: 450;
+    visibility: visible;
+}
