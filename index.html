@@ -7,6 +7,7 @@
     <title>LivrariaDev | O reduto analógico no mundo digital</title>
     <!--Arquivos CSS-->
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!--INÍCIO NAVBAR-->
@@ -23,13 +24,16 @@
             <!--FIM BURGER MENU -->
                 <ul>
                     <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
                         <a href="cadastro.html">Cadastro</a>
                     </li>
                     <li>
                         <a href="login.html">Login</a>
                     </li>
                     <li>
-                        <a href="perfil.html">Meu Perfil</a>
+                        <a href="perfil.html">Minhas compras</a>
                     </li>
                 </ul>
             </div>
@@ -37,13 +41,40 @@
     </header>
     <!--FIM NAVBAR-->
     <!--INICIO SECAO PRINCIPAL-->
+    <br>
     <main class="produtos">
         <section class="produtos-cards">
+            <div class="livros">
+                <img src="assets/htmlCSS.jpg" alt="livro HTML">
+                <h2>HTML & CSS</h2>
+                <h3>Jon Duckett</h3>
+                <a href="#">Adicionar ao carrinho</a>
+            </div>
+            <div class="livros">
+                <img src="assets/JS.jpg" alt="livro JS-Jquery">
+                <h2>Javascript & JQuery</h2>
+                <h3>Jon Duckett</h3>
+                <a href="#">Adicionar ao carrinho</a>
+            </div>
+            <div class="livros">
+                <img src="assets/React.jpg" alt="livro React">
+                <h2>React:<br>Aprendendo Praticando</h2>
+                <h3>Mauricio Silva</h3>
+                <a href="#">Adicionar ao carrinho</a>
+            </div>
+            <div class="livros">
+                <img src="assets/PM.jpg" alt="livro Product Management">
+                <h2>Inspirado</h2>
+                <h3>Marty Cagan</h3>
+                <a href="#">Adicionar ao carrinho</a>
+            </div>
 
         </section>
     </main>
     <!--FIM SECAO PRINCIPAL-->
 
-    
+    <script src="https://kit.fontawesome.com/0287dcca47.js" crossorigin="anonymous"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/app.js" type="module"></script>
 </body>
 </html>

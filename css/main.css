@@ -1,0 +1,44 @@
+h2 {
+    font-size: 2.1rem;
+
+}
+
+.produtos img {
+    height: 150px;
+    width: auto;
+}
+
+.produtos-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 960px) {
+
+    .produtos-cards {
+        align-items: center;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .livros {
+        padding-top: 2rem;
+        min-width: 18rem;
+        align-items: center;
+       text-align: center;
+        background: chocolate;
+    }
+
+    .livros img {
+        margin: auto;
+        display: block;
+    }
+    
+
+    .produtos {    
+        margin: auto;
+    }
+}
