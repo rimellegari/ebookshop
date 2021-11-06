@@ -2,10 +2,42 @@ h2 {
     font-size: 2.1rem;
 
 }
+p {
+    font-size: 1.4rem;
+}
+.livros {
+    border-radius: 1rem;
+    border: .1rem solid var(--borda);
+    min-width: 24rem;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.livros:hover {
+    cursor: pointer;
+    box-shadow: 0 0 .4rem  var(--grey-dark) ;
+}
+
+
+.livros a {
+    padding: .6rem;
+    background-color:var(--mid-blue);
+    color: var(--white);
+    border-radius: 1rem;
+    font-style: 800
+}
+
+.livros a:hover {
+    background-color: var(--secundaria);
+    color: var(--mid-yellow);
+
+}
 
 .produtos img {
-    height: 150px;
+    height: 17rem;
     width: auto;
+    padding-top: 2rem;
 }
 
 .produtos-cards {
@@ -24,13 +56,7 @@ h2 {
 
     }
 
-    .livros {
-        padding-top: 2rem;
-        min-width: 18rem;
-        align-items: center;
-       text-align: center;
-        background: chocolate;
-    }
+
 
     .livros img {
         margin: auto;
