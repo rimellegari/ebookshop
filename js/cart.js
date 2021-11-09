@@ -35,7 +35,7 @@
     for (let i=0; i< carts.length; i ++){
 
     carts[i].addEventListener('click', ()=> {
-        numeroCart();
+        numeroCart(livros[i]);
 
     })
 
@@ -49,7 +49,8 @@
             
         }
     }
-    function numeroCart() {
+    function numeroCart(livro) {
+
         let numeroItem = localStorage.getItem('numeroCart');
        numeroItem = parseInt(numeroItem)
         //verificando se já há itens no cart
@@ -61,6 +62,35 @@
             localStorage.setItem('numeroCart', 1)
             document.getElementById('contador').textContent =1 
         }
+        setItems(livro)
+    }
+
+    function setItems(livro) {
+        let livroCart = localStorage.getItem('livroNoCart');
+        livroCart = JSON.parse(livroCart)
+
+        if(livroCart != null){
+
+            if(livroCart[livro.tag] == undefined) {
+                livroCart = {
+                        ...livroCart,
+                        [livro.tag]: livro
+        
+                }
+            }
+            livroCart[livro.tag].noCart += 1
+        }else{
+            livro.noCart = 1
+            livroCart = {
+                [livro.tag]: livro
+            }
+        }
+        
+
+
+      
+        localStorage.setItem('livroNoCart', JSON.stringify(livroCart))
+
     }
 
     carregarPagina()
