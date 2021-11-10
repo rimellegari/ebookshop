@@ -36,6 +36,7 @@
 
     carts[i].addEventListener('click', ()=> {
         numeroCart(livros[i]);
+        totaldasCompras(livros[i])
 
     })
 
@@ -93,4 +94,16 @@
 
     }
 
+    function totaldasCompras(livro){
+       let precoCart = localStorage.getItem('totalCompras')
+       
+        if(precoCart != null) {
+            precoCart = parseFloat(precoCart)
+            localStorage.setItem('totalCompras',precoCart + livro.preco)
+
+        }else{
+            localStorage.setItem('totalCompras',livro.preco);
+        }
+
+    }
     carregarPagina()
