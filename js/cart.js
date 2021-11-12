@@ -104,6 +104,7 @@
         }else{
             localStorage.setItem('totalCompras',livro.preco);
         }
-
+    
     }
+
     carregarPagina()

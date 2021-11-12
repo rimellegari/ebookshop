@@ -12,6 +12,13 @@ h5 {
 
 }
 
+#livros-container {
+    margin-top: 3rem;
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .cabecalho {
     display: flex;
     justify-content: space-evenly;
@@ -39,8 +46,81 @@ h5 {
 
 }
 
+
+
 .livro-total {
     width: 10%;
     display: flex;
     align-items: center;
+}
+
+.produtos {
+    margin-top: 3rem;
+    max-width: 70%;
+    border: 0;
+    width: 45%;
+    margin-bottom: 2rem;
+}
+
+.produtos img {
+    height: 17rem;
+    width: auto;
+    padding-top: 2rem;
+    margin-left: 2rem;
+}
+
+.produtos-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.livros {
+    border-radius: 1rem;
+    border: .1rem solid var(--borda);
+    min-width: 24rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.livros:hover {
+    cursor: pointer;
+    box-shadow: 0 0 .4rem  var(--grey-dark) ;
+}
+
+#cancela {
+
+
+}
+
+#cancela:hover {
+    background-color: var(--secundaria);
+    color: var(--mid-yellow);
+
+}
+
+
+@media (max-width: 960px) {
+
+    .produtos-cards {
+        align-items: center;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+    .livros img {
+        margin: auto;
+        display: block;
+    }
+    
+
+    .produtos {    
+        margin: auto;
+    }
 }
